@@ -1,0 +1,16 @@
+{
+  "name": "launchpath",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "research": "node --env-file-if-exists=.env scripts/research.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --test test/*.test.mjs"
+  }
+}
